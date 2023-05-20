@@ -69,9 +69,9 @@ def load_levels():
     else:
         siev = mpz( sp.factorial(10000))
     
-RPC_URL = os.environ.get("RPC_URL", "http://127.0.0.1:8332")
-RPC_USER = os.environ.get("RPC_USER", "replaceme")
-RPC_PASS = os.environ.get("RPC_PASS", "replaceme") 
+RPC_URL = os.environ.get("RPC_URL", http://127.0.0.1:8332)
+RPC_USER = os.environ.get("RPC_USER", replaceme)
+RPC_PASS = os.environ.get("RPC_PASS", replaceme) 
 
 ################################################################################
 # CTypes and utility functions
