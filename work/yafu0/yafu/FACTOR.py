@@ -605,7 +605,8 @@ class CBlock(ctypes.Structure):
                 run_command += " -work 25  -threads " + str(hthreads) + " -lathreads " + str(hthreads) + " -of pqFile.txt \"factor("+str(cand)+")\" "
                 print(run_command)
                 startf = time()
-                parse = subprocess.run( run_command, capture_output=True, shell=True, timeout = 60*15 )
+                parse = subprocess.run(run_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, timeout=60*15)
+
                 endf = time()
                 parse = [ line for line in parse.stdout.decode('utf-8').split("\n") if "=" in line ]
                 tmp = []
